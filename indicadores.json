@@ -14,5 +14,9 @@
     {
         "id_indicador": "SP.RUR.TOTL",
         "descripcion": "Poblacion rural"
+    },
+    {
+        "id_indicador": "SP.URB.TOTL",
+        "descripcion": "Poblacion urbana"
     }
 ]

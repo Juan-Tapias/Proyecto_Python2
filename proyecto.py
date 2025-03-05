@@ -3,7 +3,7 @@ from funciones_proyecto import *
 from modulo_reportes import *
 from funciones_modulo2 import *
 #---------------------------------------DICCIONARIO PARA LLAMAR FUNCIONES---------------------------------------------
-opciones = {"1":poblacion, "2": paises, "3": indicadores, "4": menu_reportes}
+opciones = {"1":poblacion, "2": paises, "3": indicadores, "4":gestion_informes, "5": menu_reportes}
 while True:
 #------------------------------------------------MENU PRINCIPAL-------------------------------------------------------
     try:
@@ -15,7 +15,8 @@ while True:
 1. Registrar datos de poblacion.
 2. Agregar o mostar paises. 
 3. Agregar o mostar indicadores.
-4. Módulo de Reportes.
+4. Gestion de informacion.
+5. Módulo de Reportes.
 0. Salir del programa.
 ==================================
     """)

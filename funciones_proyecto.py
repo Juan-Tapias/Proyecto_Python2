@@ -1,6 +1,5 @@
 import os
 import json
-
 def leer_json(nombre_archivo):
         with open(nombre_archivo, "r", encoding="utf-8") as arch:
             return json.load(arch)
@@ -210,7 +209,7 @@ def indicadores():
                     if len(indicador) == 9: 
                         nuevo_indicador =  f"{indicador[:2]}.{indicador[2:5]}.{indicador[5:]}"
                         break
-                    print("❌ Error: El indicador solo debe contener letras. Intenta nuevamente.")
+                    print("❌ Error: El indicador solo debe contener un total de nueve letras. Intenta nuevamente.")
                 while True:
                     descripcion_indicador = str(input("📜 Escriba la descripcion del indicador (Ejemplo: 'Población rural'): ")).capitalize()
                     if descripcion_indicador.replace(" ", "").isalpha(): 
@@ -253,3 +252,4 @@ def indicadores():
         except Exception as e:
             print(f"❌ Error inesperado: {e}")
             break
+#-------------------------------------------------GESTION DE INFORMES--------------------------------------------------------

@@ -211,8 +211,16 @@ def poblacion_menos_rango():
 """)
     print(f"{'📅 Año'.ljust(6)} | {'🌍 País'.ljust(12)} | {'🔤 Código ISO3'.ljust(15)} | {'📜 Indicador'.ljust(15)} | {'👥 Población'.ljust(15)} | {'🏷️ Unidad '.ljust(10)} | {'🔎 Estado'.ljust(12)}")  
     print("-" * 105)
+    lista_pobla = []
+    valor = 0
     for i in leer_json("poblacion.json"):
-        if i["ano"] > ultimos_años and i["pais"] == pais:
+        if i["pais"] == pais and i["ano"] > ultimos_años:
+            valor = i['valor'] 
+            lista_pobla.append(valor)
+    
+    min_valor = min(lista_pobla)
+    for i in leer_json("poblacion.json"):
+        if i["ano"] > ultimos_años and i["pais"] == pais and i["valor"] == min_valor:
             print(f"{i['ano']:<6}  |   {i['pais']:<10}  |   {i['codigo_iso3']:<12}   |   {i['indicador_id']:<15}|  {i['valor']:<15} | {i['unidad']:<10}| {i['estado']:<12}")
     print("="*105)
     print(input("Ingrese ENTER PARA CONTINUAR..."))

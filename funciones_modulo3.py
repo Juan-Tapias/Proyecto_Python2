@@ -59,11 +59,11 @@ def mayor():
                     años_crecimiento.append(ano_actual)
 
             if años_crecimiento:
-                print("📅 Años con crecimiento superior a 1 millón de personas:")
+                print(f"📅 Años con crecimiento superior a {ano} de personas:")
                 for año in años_crecimiento:
                     print(f"➡️ {año}")
             else:
-                print("❌ No se encontraron años con crecimiento mayor a 1 millón.")
+                print(f"❌ No se encontraron años con crecimiento mayor a {ano}.")
                 
             print("=" * 70)
             input("Ingrese ENTER PARA CONTINUAR...")
@@ -85,20 +85,20 @@ def decadas():
 
                 decadas = list(range(decada, 2030, 10))
 
-                print(f"\n📊 POBLACIÓN REGISTRADA DE {pais} EN CADA DÉCADA DESDE {decada}")
+                print(f"\n📊 POBLACIÓN REGISTRADA DE {pais.upper()} EN CADA DÉCADA DESDE {decada}")
                 print("=" * 70)
                 print(f"🌍 País: {pais}")
 
                 for decada in decadas:
                     if decada in pais_poblacion:
                         print(f"📅 {decada}:  {pais_poblacion[decada]:,} personas")
-                        input("Presiona ENTER PARA CONTINUA...")
-                        break
                     else:
                         print(f"📅 {decada}:  ❌ Datos no disponibles")
                 print("=" * 70)
             else: 
                 print("❌ Error: Escribe una decada correcta ")
+            input("Presiona ENTER PARA CONTINUA...")
+            break
 
     except FileNotFoundError:
         print("❌ Error: No se encontró el archivo 'poblacion.json'.")
@@ -121,7 +121,7 @@ def años_sin_datos():
 
                 anos_sin_datos = sorted(todos_los_anos - anos_disponibles)
 
-                print(f"\n📊 AÑOS SIN DATOS DE POBLACIÓN DISPONIBLES PARA {pais}")
+                print(f"\n📊 AÑOS SIN DATOS DE POBLACIÓN DISPONIBLES PARA {pais.upper()}")
                 print("=" * 70)
                 print(f"🌍 País: {pais}")
 
@@ -130,10 +130,9 @@ def años_sin_datos():
                         print(f"❌ {ano}")
                 else:
                     print("✅ Todos los años tienen datos disponibles.")
-                print("\n⚠️ Estos años no tienen datos de población registrados en la base de datos.")
                 print("=" * 70)
             else:
-                print("❌ No hay registros de población para India en la base de datos.")
+                print(f"❌ No hay registros de población para {pais} en la base de datos.")
             input("Presiona ENTER PARA CONTINUA...")
             break
     except FileNotFoundError:
@@ -218,5 +217,130 @@ def ultima_funcion():
                 print("❌ Intente de nuevo, ha ocurrido un error")
                 input("\n🔄 Presiona ENTER para volver al menú...")
     except Exception as e:
+                print(f"❌ Error inesperado: {e}")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+
+def crecimiento_poblacional_ano_ano():
+    try:
+        pais1 = input("Escribe el pais a buscar: ").capitalize()
+        año = int(input("Ingrese el año de inicio: "))
+        año2 = int(input("Ingrese el año de fin: "))
+        limpiar_terminal()
+
+        if año > año2:
+            print("❌ El año de fin debe ser mayor o igual al año de inicio.")
+            input("\n🔄 Presiona ENTER para volver al menú...")
+            return
+        
+        print("=" * 105)
+        print(f"📋 PORCENTAJE DE CRECIMIENTO PARA EL PAIS {pais1.upper()} ({año}-{año2})".center(105))
+        print("=" * 105)
+
+        while True:
+            crecimiento_paises = {}
+            for i in leer_json("poblacion.json"):
+                if i["pais"] == pais1:
+                    ano = i["ano"]
+                    poblacion = i["valor"]
+
+                    if not isinstance(poblacion, (int, float)):
+                        print(f"❌ Error: Población no válida en el registro para el año {ano}.")
+                        continue
+
+                if año <= ano <= año2:
+                    if pais1 not in crecimiento_paises:
+                        crecimiento_paises[pais1] = {}
+                    crecimiento_paises[pais1][ano] = poblacion
+
+            paises_con_alto_crecimiento = []
+
+            for pais1, valores in crecimiento_paises.items():
+                anos_disponibles = sorted(valores.keys())
+
+                if len(anos_disponibles) > 1:  
+                    for i in range(len(anos_disponibles) - 1):
+                        ano_inicio = anos_disponibles[i]
+                        ano_fin = anos_disponibles[i + 1]
+                        pop_inicio = valores[ano_inicio]
+                        pop_fin = valores[ano_fin]
+
+                        tasa_crecimiento = ((pop_fin - pop_inicio) / pop_inicio) * 100
+                        paises_con_alto_crecimiento.append((pais1, ano_inicio, ano_fin, round(tasa_crecimiento, 2)))
+
+            if paises_con_alto_crecimiento:
+                for pais1, ano_inicio, ano_fin, crecimiento in paises_con_alto_crecimiento:
+                    print(f"🌍 País: {pais1}\n   📈 Crecimiento promedio de {ano_inicio} hasta {ano_fin} crecimiento: {crecimiento}")
+                    print("-" * 80)
+            else:
+                print(f"⚠️ No se encontró el país {pais1} en el rango ({año} - {año2}).")
+
+            input("Ingrese ENTER para continuar...")
+            break
+    except ValueError:
+        print("❌ Error: Entrada inválida. Asegúrese de ingresar números.")
+        input("\n🔄 Presione ENTER para volver al menú...")
+    except KeyboardInterrupt:
+        print("\n❌ Operación interrumpida por el usuario.")
+        input("\n🔄 Presione ENTER para volver al menú...")
+    except Exception as e:
+        print(f"❌ Error inesperado: {e}")
+        input("\n🔄 Presione ENTER para volver al menú...")
+
+def pais_20():
+    try:
+        ano = int(input("Escriba el año de inicio: "))
+        limpiar_terminal()
+        print("=" * 105)
+        print(f"Población total registrada para todos los países en {ano}.".center(105))
+        print("=" * 105)
+        print(f"{'📅 Año'.ljust(6)} | {'🌍 País'.ljust(12)} | {'🔤 Código ISO3'.ljust(15)} | {'📜 Indicador'.ljust(15)} | {'👥 Población'.ljust(15)} | {'🏷️ Unidad '.ljust(10)} | {'🔎 Estado'.ljust(12)}")
+        print("-" * 105)
+        while True:
+            for i in leer_json("poblacion.json"):
+                if i["ano"] == ano:
+                    print(f"{i['ano']:<6}  |   {i['pais']:<10}  |   {i['codigo_iso3']:<12}   |   {i['indicador_id']:<15}|  {i['valor']:<15} | {i['unidad']:<10}| {i['estado']:<12}")
+            print("-"*105)
+            input("Ingrese ENTER PARA CONTINUAR...")
+            break
+    except ValueError:
+                print("❌ Intente de nuevo, ha ocurrido un error")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+    except KeyboardInterrupt:
+                print("❌ Intente de nuevo, ha ocurrido un error")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+    except Exception as e:
+                print(f"❌ Error inesperado: {e}")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+
+def gestion_informes():
+    while True:
+    #------------------------------------------------MENU PRINCIPAL-------------------------------------------------------
+        try:
+            limpiar_terminal()
+            print("""
+=======================================
+    📋 GESTION DE INFORMES
+=======================================
+1. Informes de población.
+2. Informes de crecimiento poblacional.
+0. Salir de la gestion de informes.     
+=======================================
+        """)
+    #---------------------------------------LLAMAR FUNCIONES,SALIR,AVISO DE ERRORES AL INTRODUCIR-----------------------------
+            opc = input("Ingrese la opciona a realizar: ")
+            if opc == "1":
+                datos_india_2020_2023()
+            elif opc == "2":
+                crecimiento_poblacional_ano_ano()
+            elif opc == "0":
+                input("Presiona ENTER PARA REGRESAR AL MENU PRINCIPAL...")
+                break
+        except ValueError:
+                print("❌ Intente de nuevo, ha ocurrido un error")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+        except KeyboardInterrupt:
+                print("❌ Intente de nuevo, ha ocurrido un error")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+        except Exception as e:
                 print(f"❌ Error inesperado: {e}")
                 input("\n🔄 Presiona ENTER para volver al menú...")
