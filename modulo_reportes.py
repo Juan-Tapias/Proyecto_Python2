@@ -8,7 +8,7 @@ opciones = {
             "5": india_2022, "6": poblacion_2000, "7": poblacion_2010, "8": porcentaje_crecimiento, "9": pais_2023,
             "10": poblacion_mas_baja, "11": numero_registros_por_ano, "12": porcentaje_crecimiento2, "13": poblacion_mayor,
             "14": año_especifico, "15": poblacion_menos_rango, "16": promedio_poblacion, "17":disponibles, "18": poblacion_disponible,
-            "19": poblacion_especifica, "20": mayor
+            "19": poblacion_especifica, "20": mayor, "21": decadas
             }
 
 def menu_reportes():
@@ -40,6 +40,7 @@ def menu_reportes():
 18. Listar los países con datos de población disponibles para cada año entre 2000 y 2023.
 19. Consultar la población de un país en un año específico.
 20. Años en los que la población de un pais creció X cantidad en comparación con el año anterior.
+21. Población registrada de un pais en cada década desde X años.
 0.  Volver al menú principal.  
 ==================================================================================================
 """)

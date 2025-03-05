@@ -74,3 +74,35 @@ def mayor():
         print("❌ Error: El archivo 'poblacion.json' no tiene un formato JSON válido.")
     except Exception as e:
         print(f"❌ Error inesperado: {e}")
+def decadas():
+    limpiar_terminal()    
+    try:
+        while True:
+            pais = input("Escribe el pais a buscar: ").capitalize()
+            decada = int(input("Escribe desde que decada quieres buscar los valores: "))
+            if decada % 10 == 0:
+                pais_poblacion = {i["ano"]: i["valor"] for i in leer_json("poblacion.json") if i["pais"] == pais}
+
+                decadas = list(range(decada, 2030, 10))
+
+                print(f"\n📊 POBLACIÓN REGISTRADA DE {pais} EN CADA DÉCADA DESDE {decada}")
+                print("=" * 70)
+                print(f"🌍 País: {pais}")
+
+                for decada in decadas:
+                    if decada in pais_poblacion:
+                        print(f"📅 {decada}:  {pais_poblacion[decada]:,} personas")
+                        input("Presiona ENTER PARA CONTINUA...")
+                        break
+                    else:
+                        print(f"📅 {decada}:  ❌ Datos no disponibles")
+                print("=" * 70)
+            else: 
+                print("❌ Error: Escribe una decada correcta ")
+
+    except FileNotFoundError:
+        print("❌ Error: No se encontró el archivo 'poblacion.json'.")
+    except json.JSONDecodeError:
+        print("❌ Error: El archivo 'poblacion.json' no tiene un formato JSON válido.")
+    except Exception as e:
+        print(f"❌ Error inesperado: {e}")
