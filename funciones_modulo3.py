@@ -106,3 +106,117 @@ def decadas():
         print("❌ Error: El archivo 'poblacion.json' no tiene un formato JSON válido.")
     except Exception as e:
         print(f"❌ Error inesperado: {e}")
+
+def años_sin_datos():
+    limpiar_terminal()
+    try:
+        while True:
+            pais = input("Escribe el pais a buscar: ").capitalize() 
+            anos_disponibles = {i["ano"] for i in leer_json("poblacion.json") if i["pais"] == pais and i["estado"] == "disponible"}
+
+            if anos_disponibles:
+                primer_ano = min(anos_disponibles)
+                ultimo_ano = max(anos_disponibles)
+                todos_los_anos = set(range(primer_ano, ultimo_ano + 1))
+
+                anos_sin_datos = sorted(todos_los_anos - anos_disponibles)
+
+                print(f"\n📊 AÑOS SIN DATOS DE POBLACIÓN DISPONIBLES PARA {pais}")
+                print("=" * 70)
+                print(f"🌍 País: {pais}")
+
+                if anos_sin_datos:
+                    for ano in anos_sin_datos:
+                        print(f"❌ {ano}")
+                else:
+                    print("✅ Todos los años tienen datos disponibles.")
+                print("\n⚠️ Estos años no tienen datos de población registrados en la base de datos.")
+                print("=" * 70)
+            else:
+                print("❌ No hay registros de población para India en la base de datos.")
+            input("Presiona ENTER PARA CONTINUA...")
+            break
+    except FileNotFoundError:
+        print("❌ Error: No se encontró el archivo 'poblacion.json'.")
+    except json.JSONDecodeError:
+        print("❌ Error: El archivo 'poblacion.json' no tiene un formato JSON válido.")
+    except Exception as e:
+        print(f"❌ Error inesperado: {e}")
+
+def poblacion_mas_alta():
+    try:
+        pais = input("Escribe el pais a buscar: ").capitalize()
+        limpiar_terminal()
+        print(f"""
+========================================================================================================
+                        📋 LISTADO DE {pais.upper()} POBLACION MAS ALTA
+========================================================================================================
+    """)
+        print(f"{'📅 Año'.ljust(6)} | {'🌍 País'.ljust(12)} | {'🔤 Código ISO3'.ljust(15)} | {'📜 Indicador'.ljust(15)} | {'👥 Población'.ljust(15)} | {'🏷️ Unidad '.ljust(10)} | {'🔎 Estado'.ljust(12)}")  
+        print("-" * 105)
+        while True:
+            lista_pobla = []
+            valor = 0
+            for i in leer_json("poblacion.json"):
+                if i["pais"] == pais:
+                    valor = i['valor'] 
+                    lista_pobla.append(valor)
+
+            # Obtiene el minimo valor de la lista_pobla
+            max_valor = max(lista_pobla)
+            for i in leer_json("poblacion.json"):
+                if i["pais"] == pais and i["valor"] == max_valor:
+                    print(f"{i['ano']:<6}  |   {i['pais']:<10}  |   {i['codigo_iso3']:<12}   |   {i['indicador_id']:<15}|  {i['valor']:<15} | {i['unidad']:<10}| {i['estado']:<12}")
+                    break    
+            if i["pais"] != pais: 
+                print(f"❌ El pais {pais} no esta en la lista o en el rango")
+            print("="*105)
+            input("Ingrese ENTER PARA CONTINUAR...")
+            break
+    except ValueError:
+                print("❌ Intente de nuevo, ha ocurrido un error")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+    except KeyboardInterrupt:
+                print("❌ Intente de nuevo, ha ocurrido un error")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+    except Exception as e:
+                print(f"❌ Error inesperado: {e}")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+
+def ultima_funcion():
+    try:
+        limpiar_terminal()
+        while True:
+            registros_por_año = {}
+
+            for i in leer_json("poblacion.json"):
+                if i["estado"] == "disponible":
+                    año = i["ano"]
+                    pais = i["pais"]
+
+                    if año not in registros_por_año:
+                        registros_por_año[año] = set() 
+                    registros_por_año[año].add(pais)
+
+            años_con_mas_de_50 = sorted([año for año, paises in registros_por_año.items() if len(paises) > 50])
+
+            print("\n📊 AÑOS CON DATOS DE POBLACIÓN PARA MÁS DE 50 PAÍSES")
+            print("=" * 70)
+            if años_con_mas_de_50:
+                for año in años_con_mas_de_50:
+                    print(f"✅ {año}")
+            else:
+                print("❌ No hay años con datos disponibles para más de 50 países.")
+
+            print("=" * 70)
+            input("Ingrese ENTER PARA CONTINUAR...")
+            break
+    except ValueError:
+                print("❌ Intente de nuevo, ha ocurrido un error")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+    except KeyboardInterrupt:
+                print("❌ Intente de nuevo, ha ocurrido un error")
+                input("\n🔄 Presiona ENTER para volver al menú...")
+    except Exception as e:
+                print(f"❌ Error inesperado: {e}")
+                input("\n🔄 Presiona ENTER para volver al menú...")
