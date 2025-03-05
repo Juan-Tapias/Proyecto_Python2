@@ -1,0 +1,374 @@
+[
+
+    {
+        "ano": 2000,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblacion",
+        "valor": 1053050912,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2025,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1238709233,
+        "estado": "no disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2000,
+        "pais": "Estados Unidos",
+        "codigo_iso3": "USA",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblacion",
+        "valor": 282162411,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2000,
+        "pais": "China",
+        "codigo_iso3": "CHN",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblacion",
+        "valor": 1262645000,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2000,
+        "pais": "Brasil",
+        "codigo_iso3": "BRA",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblacion",
+        "valor": 174790340,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2000,
+        "pais": "Rusia",
+        "codigo_iso3": "RUS",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblacion",
+        "valor": 146596557,
+        "estado": "disponible",
+        "unidad": "personas"
+    }
+    ,
+    {
+        "ano": 2001,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1075634993,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2002,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1098317955,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2003,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1121292677,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2004,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1144605937,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2005,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1168050364,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2006,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1191510379,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2007,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1215047031,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2008,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1238709233,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2009,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1262645000,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2010,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1285842135,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2011,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1309973366,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2012,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1332414913,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2013,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1354567991,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2014,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1376936240,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2015,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1399872974,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2016,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1423145323,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2017,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1447031784,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2018,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1466481776,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2019,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1486780261,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2020,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1407563842,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2021,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1427868123,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2022,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1449992523,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2023,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1380000000,
+        "estado": "no disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 1995,
+        "pais": "Argentina",
+        "codigo_iso3": "ARG",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 34400000,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 1987,
+        "pais": "Francia",
+        "codigo_iso3": "FRA",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 56100000,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 1972,
+        "pais": "Jap\u00f3n",
+        "codigo_iso3": "JPN",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 107000000,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2005,
+        "pais": "India",
+        "codigo_iso3": "IND",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblaci\u00f3n",
+        "valor": 1168050364,
+        "estado": "disponible",
+        "unidad": "personas"
+    }, 
+    {
+        "ano": 2010,
+        "pais": "Colombia",
+        "codigo_iso3": "COL",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblacion",
+        "valor": 46000000,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2015,
+        "pais": "Colombia",
+        "codigo_iso3": "COL",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblacion",
+        "valor": 48200000,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2010,
+        "pais": "Argentina",
+        "codigo_iso3": "ARG",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblacion",
+        "valor": 40600000,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2015,
+        "pais": "Argentina",
+        "codigo_iso3": "ARG",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Total de poblacion",
+        "valor": 43000000,
+        "estado": "disponible",
+        "unidad": "personas"
+    }
+]
