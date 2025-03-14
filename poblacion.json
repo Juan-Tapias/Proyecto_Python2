@@ -1,5 +1,4 @@
 [
-
     {
         "ano": 2000,
         "pais": "India",
@@ -59,8 +58,7 @@
         "valor": 146596557,
         "estado": "disponible",
         "unidad": "personas"
-    }
-    ,
+    },
     {
         "ano": 2001,
         "pais": "India",
@@ -330,7 +328,7 @@
         "valor": 1168050364,
         "estado": "disponible",
         "unidad": "personas"
-    }, 
+    },
     {
         "ano": 2010,
         "pais": "Colombia",
@@ -368,6 +366,16 @@
         "indicador_id": "SP.POP.TOTL",
         "descripcion": "Total de poblacion",
         "valor": 43000000,
+        "estado": "disponible",
+        "unidad": "personas"
+    },
+    {
+        "ano": 2020,
+        "pais": "Colombia",
+        "codigo_iso3": "COL",
+        "indicador_id": "SP.POP.TOTL",
+        "descripcion": "Poblacion total",
+        "valor": 50630000,
         "estado": "disponible",
         "unidad": "personas"
     }

@@ -18,5 +18,15 @@
         "nombre": "Brasil",
         "codigo_iso": "BR",
         "codigo_iso3": "BRA"
+    },
+    {
+        "nombre": "Mexico",
+        "codigo_iso": "MX",
+        "codigo_iso3": "MXC"
+    },
+    {
+        "nombre": "Uruguay",
+        "codigo_iso": "UR",
+        "codigo_iso3": "URU"
     }
 ]

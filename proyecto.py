@@ -1,3 +1,4 @@
+
 # Instituto de Estadísticas Globales
 from funciones_proyecto import *
 from modulo_reportes import *
